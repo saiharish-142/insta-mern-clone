@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+
+.App{
+  width: 100vw;
+}
+
+.App__profile{
+  display: flex;
+  justify-content: center;
+}
+
+.nav-wrapper{
+  width: 100% !important;
+}
+
+.font__black{
+  color: black;
+}
+#font__black{
+  color: black;
+  padding:0 15px;
+}
+
+.brand-logo{
+  font-family: 'Grand Hotel', cursive;
+}
+h2{
+  font-family: 'Grand Hotel', cursive;
+}
+
+.link{
+  color: black;
+  padding: 20px;
+}
+
+.navBar{
+  width: 100% !important;
+  overflow: hidden;
+  position: sticky !important;
+  top: 0;
+  z-index: 1 !important;
+}
+
+.myCard{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.auth-card{
+  padding: 30px;
+  text-align: center;
+  max-width: 500px;
+}
+
+.input-field input[type=text]:focus{
+  border-bottom: 1px solid rgb(49, 74, 216) !important;
+  box-shadow: 0 1px 0 0 rgb(49, 74, 216) !important;
+}
+.input-field input[type=password]:focus{
+  border-bottom: 1px solid rgb(49, 74, 216) !important;
+  box-shadow: 0 1px 0 0 rgb(49, 74, 216) !important;
+}
+
+.profile{
+  padding: 10px;
+  max-width: 800px;
+  height: 90vh;
+  overflow: auto;
+  border: 1px solid lightgray;
+}
+
+.profile__head{
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid gray;
+}
+
+.profile__image{
+  padding: 10px 50px;
+  margin-right: 20px;
+}
+
+.profile__headDescription{
+  width: 100%;
+  margin-left: 10px ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile__gallery{
+  background-color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Profile__galleryimg{
+  width: 230px;
+  height: 200px;
+  margin: 10px;
+  padding: 10px 0;
+  border: 1px solid lightgray;
+  background-color: #fdfdfd;
+}
+
+.home-card{
+  max-width: 500px;
+  height: max-content;
+  margin: 26px auto;
+}
+
+#mobile{
+  display: none;
+}
+
+#window{
+  display: flex;
+}
+
+/* #toast-container{
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  to change the css of toast
+} */
+
+@media(max-width: 600px) {
+  .profile{
+    width: 100vw;
+  }
+  .profile__top{
+    display: flex;
+    justify-content: center;
+  }
+  .profile__head{
+    flex-direction: column;
+    width: max-content;
+    padding: 0;
+  }
+  .profile__image{
+    width: fit-content;
+  }
+  .profile__headDescription{
+    width: fit-content;
+  }
+  .Profile__galleryimg{
+    width: 95vw;
+    height: auto;
+  }
+  #window{
+    display: none;
+  }
+  #mobile{
+    display: flex;
+  }
+}
