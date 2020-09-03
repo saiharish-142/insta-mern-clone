@@ -5,7 +5,7 @@ const User = mongoose.model("User")
 const crypto = require('crypto')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
-const { JWT_SECRET, NODEMAIL_APIKEY } = require('../config/keys')
+const { JWT_SECRET, NODEMAIL_APIKEY, EMAIL } = require('../config/keys')
 const requireLogin = require('../middleware/requireLogin')
 const nodemailer = require('nodemailer')
 const sendgridTransport = require('nodemailer-sendgrid-transport')
@@ -102,7 +102,7 @@ router.post('/reset-password',(req,res) => {
                     subject:"password reset",
                     html:`
                     <p>You have requested for password reset</p>
-                    <h5>click in this link <a href="http://localhost:3000/reset/${token}">link</a> to reset your password</h5>
+                    <h5>click in this link <a href="${EMAIL}/reset/${token}">link</a> to reset your password</h5>
                     `
                 })
                 res.json({message:"Check Your email"})
@@ -133,5 +133,4 @@ router.post('/new-password',(req,res)=>{
     })
 })
 
-// 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
 module.exports = router

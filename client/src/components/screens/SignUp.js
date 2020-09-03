@@ -9,7 +9,7 @@ function SignUp() {
     const [email, setEmail] = useState("")
     const PostData = () => {
         if(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
-            fetch("http://localhost:5000/auth/signup",{
+            fetch("/auth/signup",{
                 method:"post",
                 headers:{
                     "Content-Type":"application/json"
